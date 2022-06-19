@@ -17,7 +17,7 @@ public class Task1 {
 
         for (int index = 0; index < intArray.length; index++){
             Random randomInt = new Random();
-            intArray[index]= randomInt.nextInt(0,10);
+            intArray[index]= randomInt.nextInt(10);
         }
 
         System.out.println(Arrays.toString(intArray));

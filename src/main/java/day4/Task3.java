@@ -15,7 +15,7 @@ public class Task3 {
             currentRowSum = 0;
             for (int indexX = 0; indexX < matrix[indexY].length; indexX++){
                 Random r =new Random();
-                matrix[indexY][indexX] = r.nextInt(0,50);
+                matrix[indexY][indexX] = r.nextInt(50);
                 currentRowSum += matrix[indexY][indexX];
                 System.out.print(matrix[indexY][indexX] + " ");
             }

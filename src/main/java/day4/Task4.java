@@ -9,7 +9,7 @@ public class Task4 {
 
         for (int index = 0; index < N; index ++){
             Random r = new Random();
-            intArray[index] = r.nextInt(0, 10000);
+            intArray[index] = r.nextInt( 10000);
             System.out.print(intArray[index]  + " ");
         }
         int maxSum = 0;

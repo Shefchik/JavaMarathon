@@ -10,7 +10,7 @@ public class Task2 {
 
         for(int index = 0; index < intArray.length; index++){
             Random randomInt = new Random();
-            intArray[index] = randomInt.nextInt(0, 10000);
+            intArray[index] = randomInt.nextInt( 10000);
         }
 
         int max = Integer.MIN_VALUE;
