@@ -1,5 +1,7 @@
 package day9.Task1;
 
+import day6.Student;
+
 public class Teacher extends Human{
     private final String subjectName;
 
@@ -23,4 +25,6 @@ public class Teacher extends Human{
     }
 
 
+    public void evaluate(Student student) {
+    }
 }

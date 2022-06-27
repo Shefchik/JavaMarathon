@@ -14,7 +14,9 @@ public class Teacher {
 
     public void evaluate(day6.Student student){
         Random random = new Random();
-        int studentMark = random.nextInt(2, 5);
+        int min = 2;
+        int max = 5;
+        int studentMark = random.nextInt(max - min) + min;
 
         String studentMarkWord = getWordMark(studentMark);
 

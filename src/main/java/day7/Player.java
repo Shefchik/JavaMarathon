@@ -22,11 +22,23 @@ public class Player {
         String result;
         if (countPlayers < REQUIRED_PLAYERS_NUMBER){
             int freePlaceCount = REQUIRED_PLAYERS_NUMBER - countPlayers;
-            String freePlaceString = switch (freePlaceCount) {
-                case 5, 6 -> " свободных мест";
-                case 4, 3, 2 -> " свободных места";
-                case 1 -> " свободное место";
-                default -> "";
+            String freePlaceString;
+
+            switch (freePlaceCount) {
+                case 5:
+                case 6:
+                    freePlaceString = "свободных мест";
+                    break;
+                case 4:
+                case 3:
+                case 2:
+                    freePlaceString = " свободных места";
+                    break;
+                case 1:
+                    freePlaceString = " свободное место";
+                    break;
+                default:
+                    freePlaceString = "";
             };
             result = "Команды неполные. На поле еще есть " + freePlaceCount + freePlaceString;
         }else {
