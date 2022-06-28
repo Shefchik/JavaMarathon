@@ -1,6 +1,7 @@
 package day12.task5;
 
 
+
 public class MusicArtist {
     String name;
     int age;

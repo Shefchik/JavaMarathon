@@ -1,5 +1,6 @@
 package day12.task5;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,5 +24,7 @@ public class Task5 {
         MusicBand.transferMembers(bandFrom, bandTo);
         System.out.println("After Merge");
         bandTo.printMembers();
+        System.out.println("Old band members:");
+        bandFrom.printMembers();
     }
 }

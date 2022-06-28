@@ -1,6 +1,7 @@
 package day12.task5;
 
 
+
 import java.util.List;
 
 public class MusicBand {
@@ -12,6 +13,7 @@ public class MusicBand {
         for(MusicArtist item : bandFrom.membersList){
             bandTo.membersList.add(item);
         }
+        bandFrom.membersList.clear();
     }
 
     public  MusicBand(String name, int year, List<MusicArtist> membersList){

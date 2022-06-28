@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+
 public class Task3 {
     public static void main(String[] args) {
         List<MusicBand> bandsList = new ArrayList<>();
 
-        bandsList.add(new MusicBand("Queen", 1971));
-        bandsList.add(new MusicBand("Beatles", 1961));
+
         bandsList.add(new MusicBand("Aria", 1989));
         bandsList.add(new MusicBand("Metallica", 1978));
         bandsList.add(new MusicBand("Manowar", 1991));
