@@ -27,7 +27,7 @@ public class Task1 {
             for(int index = 0; index < stringNumbers.length; index++){
                 intNumbers [index] = Integer.valueOf(stringNumbers[index]);
             }
-
+            scanner.close();
             System.out.println("Сумма чисел = " + Arrays.stream(intNumbers).sum());
         }
         catch(FileNotFoundException e){

@@ -35,6 +35,7 @@ public class Task3 {
                 }
 
             }
+            scanner.close();
         }
         catch(FileNotFoundException e){
             System.out.println("Файл не найден!");
