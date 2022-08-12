@@ -23,11 +23,18 @@ public class GamePlay {
         while(proceedTheGame){
 
             //--Get the hit target coordinates!
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Игрок " + playerList.get(shootingPlayerIndex).getName() + ", введите координаты для выстрела: ");
-            String input = scanner.next();
-            String[] xy = input.split(",");
-            Point shootPoint = new Point(Integer.parseInt(xy[0]),Integer.parseInt(xy[1]));
+            Point shootPoint;
+            try {
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Игрок " + playerList.get(shootingPlayerIndex).getName() + ", введите координаты для выстрела: ");
+                String input = scanner.next();
+                String[] xy = input.split(",");
+                shootPoint = new Point(Integer.parseInt(xy[0]),Integer.parseInt(xy[1]));
+            }catch (Exception ex){
+                System.out.println("Формат введения координат не корректен!");
+                continue;
+            }
+
 
             //If the target is not hit then switch the shooting player vice versa
             if(!playerList.get(shootingPlayerIndex).shoot(playerList.get(attackedPlayerIndex), shootPoint)){

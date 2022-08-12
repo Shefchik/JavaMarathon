@@ -34,9 +34,12 @@ public class Player {
         shipList.add(new Ship(1));
         shipList.add(new Ship(1));
         shipList.add(new Ship(1));
+        shipList.forEach(s -> {
+            s.setUpShip(totalHaloPoints);
+            showShipsSetUp();
+        });
 
-        shipList.forEach(s -> s.setUpShip(totalHaloPoints));
-        showShipsSetUp();
+
     }
     public void showShipsSetUp(){
         for(int indexY = Ship.MIN_COORDINATE; indexY <= Ship.MAX_COORDINATE; indexY++){

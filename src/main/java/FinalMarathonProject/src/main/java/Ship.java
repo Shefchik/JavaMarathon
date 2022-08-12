@@ -84,14 +84,19 @@ public class Ship {
                 resultFormat = "";
 
         }
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Введите координаты " + numberOfDecks + " палубного корабля(формат: " + resultFormat + ")");
-        String input = scanner.next();
-        String[] coords = input.split(";");
-        for(String entry : coords){
-            String[] xy = entry.split(",");
-            deckPoints.add(new Point(Integer.parseInt(xy[0]),Integer.parseInt(xy[1])));
+        try {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Введите координаты " + numberOfDecks + " палубного корабля(формат: " + resultFormat + ")");
+            String input = scanner.next();
+            String[] coords = input.split(";");
+            for(String entry : coords){
+                String[] xy = entry.split(",");
+                deckPoints.add(new Point(Integer.parseInt(xy[0]),Integer.parseInt(xy[1])));
+            }
+        }catch (Exception ex){
+            System.out.println("Формат введения координат не корректен!");
         }
+
 
         if(!isValidShip()){
             deckPoints.clear();
